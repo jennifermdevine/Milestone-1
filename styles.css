@@ -1,0 +1,9 @@
+h1 {
+    color: red;
+}
+
+body {
+    background-image: url(assets/willowbeach_photo.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
