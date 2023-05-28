@@ -14,5 +14,6 @@ body {
     background-color: white;
     opacity: 65%;
     border: 1px solid black;
-    height: 600px;
+    height: 500px;
+    display: flex;
 }
