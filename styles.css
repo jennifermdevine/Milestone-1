@@ -1,12 +1,9 @@
-h1 {
-    color: red;
-}
-
 body {
     background-image: url(assets/willowbeach_photo.JPG);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    color: rgb(97, 41, 0);
 }
 
 #box {
@@ -20,8 +17,53 @@ body {
 
 #fishingresult {
     padding: 10px;
-    background-color: white;
-    opacity: 75%;
     border: 1px solid black;
-    display: flex;
+    height: 100px;
+}
+
+img {
+    width: 20%;
+    border: 1px solid black;
+}
+
+button {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 14px 40px;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid rgb(97, 41, 0);
+    box-shadow: 0 9px rgb(97, 41, 0);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 150ms ease-in-out;
+        
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 100%;
+            background: rgb(250, 104, 0);
+            z-index: -1;
+            transition: width 150ms ease-in-out;
+        }
+        
+        &:hover {
+            color: #fff;
+            &:after {
+            width: 110%;
+            }
+        }
+    }
+
+button:active {
+    background-color: rgb(250, 104, 0);
+    box-shadow: 0 5px rgb(48, 20, 0);
+    transform: translateY(4px);
 }
