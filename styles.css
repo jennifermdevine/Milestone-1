@@ -33,7 +33,7 @@ img {
 
 button {
     display: flex;
-    color: black;
+    color: rgb(97, 41, 0);
     font-weight: bold;
     font-size: 30px;
     padding: 14px 40px;
