@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="javascript" type="text/js" href="script.js">
 
@@ -18,18 +19,18 @@
 function fishingResult() {
     var fishingResultImage = new Array();
 
-    fishingResultImage[0] = "https://i.imgur.com/fNGac22.jpeg";
-    fishingResultImage[1] = "https://i.imgur.com/tCqzKdt.jpeg";
-    fishingResultImage[2] = "https://i.imgur.com/kZV3pbR.jpeg";
-    fishingResultImage[3] = "https://i.imgur.com/x7HW1fX.jpeg";
-    fishingResultImage[4] = "https://i.imgur.com/bbcDdxU.jpeg";
-    fishingResultImage[5] = "https://i.imgur.com/DrMgN5c.jpeg";
-    fishingResultImage[6] = "https://i.imgur.com/7Ld6bO5.jpeg";
-    fishingResultImage[7] = "https://i.imgur.com/JN1YlGx.png";
-    fishingResultImage[8] = "https://i.imgur.com/JMzb1Hs.jpeg";
+    fishingResultImage[0] = "http://i.imgur.com/fNGac22.jpeg";
+    fishingResultImage[1] = "http://i.imgur.com/tCqzKdt.jpeg";
+    fishingResultImage[2] = "http://i.imgur.com/kZV3pbR.jpeg";
+    fishingResultImage[3] = "http://i.imgur.com/x7HW1fX.jpeg";
+    fishingResultImage[4] = "http://i.imgur.com/bbcDdxU.jpeg";
+    fishingResultImage[5] = "http://i.imgur.com/DrMgN5c.jpeg";
+    fishingResultImage[6] = "http://i.imgur.com/7Ld6bO5.jpeg";
+    fishingResultImage[7] = "http://i.imgur.com/JN1YlGx.png";
+    fishingResultImage[8] = "http://i.imgur.com/JMzb1Hs.jpeg";
 
     var number = Math.floor(Math.random() * fishingResultImage.length);
-    return document.getElementById("result").innerHTML = '<img src="' + fishingResultImage[number] + '" style="width: 200px" />';
+    return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[number] + '" style="width: 200px" />';
     }
 
 </script>
@@ -39,7 +40,7 @@ function fishingResult() {
     <div id="box">
         <p>Lake Elwood Fishing</p>
         <br>
-        <div id="castlure"><button onclick = "setInterval(fishingResult, 5000)">Cast Lure!</button></div>
+        <div id="castlure"><button onclick = "setInterval(fishingResult, 3000)">Cast Lure!</button></div>
         <div id="results"><h2>You fished up... </h2><span id="result"></span></div>
     </div>
     </div>
