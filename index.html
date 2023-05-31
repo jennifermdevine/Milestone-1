@@ -6,18 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="javascript" type="text/js" href="script.js">
 
     <script src="https://kit.fontawesome.com/cbf4aafa15.js" crossorigin="anonymous"></script>
 
     <title>Lake Elwood</title>
     
 </head>
+
+<script>
+function fishingResult() {
+    var fishingResultImage = new Array();
+
+    fishingResultImage[0] = "https://i.imgur.com/fNGac22.jpeg";
+    fishingResultImage[1] = "https://i.imgur.com/tCqzKdt.jpeg";
+    fishingResultImage[2] = "https://i.imgur.com/kZV3pbR.jpeg";
+    fishingResultImage[3] = "https://i.imgur.com/x7HW1fX.jpeg";
+    fishingResultImage[4] = "https://i.imgur.com/bbcDdxU.jpeg";
+    fishingResultImage[5] = "https://i.imgur.com/DrMgN5c.jpeg";
+    fishingResultImage[6] = "https://i.imgur.com/7Ld6bO5.jpeg";
+    fishingResultImage[7] = "https://i.imgur.com/JN1YlGx.png";
+    fishingResultImage[8] = "https://i.imgur.com/JMzb1Hs.jpeg";
+
+    var number = Math.floor(Math.random() * fishingResultImage.length);
+    return document.getElementById("result").innerHTML = '<img src="' + fishingResultImage[number] + '" style="width: 200px" />';
+    }
+
+</script>
+
 <body>
+
     <div id="box">
-        <h1>Lake Elwood Fishing</h1>
+        <p>Lake Elwood Fishing</p>
         <br>
-        <div id="castlure"><button>Cast Lure!</button></div>
-        <div id="fishingresult"><h2>You fished up...</h2><img src="assets/humanremains_pixelart.jpg"></div>
+        <div id="castlure"><button onclick = "setInterval(fishingResult, 5000)">Cast Lure!</button></div>
+        <div id="results"><h2>You fished up... </h2><span id="result"></span></div>
     </div>
+    </div>
+
 </body>
 </html>
