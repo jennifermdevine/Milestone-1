@@ -8,6 +8,8 @@ body {
 
 p {
     font-size: 100px;
+    align-content: center;
+    display: flex;
 }
 
 #box {

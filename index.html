@@ -29,18 +29,35 @@ function fishingResult() {
     fishingResultImage[7] = "https://lh3.googleusercontent.com/8ZpcmBS5DNbEXaF1W1uM-lO3Ui9mxo-SIcLOd1r0Zfu88LfUS2KIYr-wo2LSGfAR0BFZ-dBulGZwDSyWxOeRK4yFlSmJLImBRa7cef_iOAE63GFXm8dfENFJ3iLiGr0I2UKI5ik6JYAogro9Z8bn7_ocyGuVVlRTmaq-hS0zr99HQgWgSV_iqCKKrR2sZ6sXstKloaorKk10Da5TnqNhMXNq66Oaz0mMb27noz6B6O6I079wjJzdXkY_UIG7DRyTnsiMb6bR8oJkBHU-c9cHEXDsufMRdqeZn301IjRPt48pmjdDMj3QLfGi9tFTC7-UU6Z8aI_FqL1j0m4mzp8ytmzA9k2Jc71aHaENUXWg7uCKgNMU1QsaTNZ_wAj1rxJGIAOCC0MQ7wdggwHhnWgyjBJGwmn4sR7RljEskXyaYp6zTsoJZFF6nRcnFviYDpR1KwXXzBqjIw03MBmerlTYsRjBfPqUbANd5zLTOLfNwcaN_D_9arhoNVvML-beTxEdHo4bpZfFmHhGWwYVWsuNh4zepQtuE1D5QBIOLGnbGPy2RblNDchRCifH_qEPKFhb9HJOWTDkqo_Drc_VOmBQjiKqk2sxSBgb7hK8-iO1dY_z_rG-qWnSmyRjsl-off_kTx6Qlvm6VfcgJhJVMGx59vgMo61waxdM3tKamdMzJ375m8eNrYpuRHP7sxJha871Kjlv6IPMnmXD-elMfwn0seNqKPRxspi8uanGwQbrQhLig-ccjo5FuHT0jRRVjEajSREeXIjTbzBxv4LoKjxXqbIgkR43ANXFvlvR91NNUc4JNry205sAdE4RkOKS9WEHRzPQgWVeZz4zN8Vz0tyQPX7ApuarC52tPpYup0iw1fc8cjSDIs8_Ij7tmUD6iGsZZ8eLxUCf8fNulWGodZwAA2oCyj6p4mPKOq_xEVEmmL5xI55X4Fbvx6wsZQYOyK1lwfY6ax06zkZVoVbS0IgTZQD5YW453zYF4wO__pBGwitnwzgEWppCeOxYl5QsMTlNN7xVk8x9Tbs3OfCbBO60UHbM_RE=w974-h937-s-no?authuser=1"; //vintage casino chips
     fishingResultImage[8] = "https://lh3.googleusercontent.com/fmMJnN2eRGL7N0whkzjPsG0qKerdJyTs9VfqqlnBH6o005-WxY6XXBYQ78Swbs8cyYobTeCulsq9IGxE5byaSUEM8s2fPYdqNPIxJ5pB7Na4796nVosOk2vAVCROqvqA7dCghlf4xqG8ylzcFf3NcwDYU9U7_vdKUDE5KFVHmw0vgOJo8qP404vpFAqQWS1-6Ls3aCFPrgfZlp3eNjZtOxI5iQL_PihmlYpXEFbVDuflrdYImZYjKAgviHgNcUUvOpHM86-8AULfnv1b-IWMdsmMDqSD9Y1y0OXJkwOlYyVRSO1l3R_qbFA3cYc9hfU4hARCh9vtWr7U442RbBS5NMvjsOnduZxdYTaBJ1sxUT66YIIshvrwzkSi0CoVjI0kDRbxCUw1SxBZpyaEsXUNbQl29_R0OhJvbrWWsrnBzXKnO5nIuhcrlbGVI37j0vHpaD6gLfOK2zLX4Xm1tA4d0-3PnwhWByVXOQRAT_RQ4XpudyOaQBe2lwvEhquVTLxfJxpDQzwt7doKz1t7B0rfd50VKoKzQBdhD365Vc_3PXw3z_9LMprzUfeTjxB6xsRd914yggwxq2Vml6OBCxZB6XRIFSV_3wkLhIEsZqSpNVtdEl-1qrhivjzUa4GvuBYDhtNsFVwo9lKM4fZThMj7kX3WeL0bQ41q-cnEEqHIsfyro4-_d7zJdqquJF-1Kc_eKDsXn_yy4Dqmo7Z8cQyqwcAMnM0wNALyXSOCy614aB_Z0wJo3DFrjyeOnDA8XAEXNrsnejv5IuQYWnufoE8kXDOj5Mh_E4NAz4tLpWxkIWQITxDqPHGV46xfiOIBG9PyN9RyHpHQYLFl_KkgHwVm1FxurqpYaJrrit_zU5d8R2vKp8nz9qKwlp84HJpr6rpMZFT_HdYtsRlVUAmU4HfXcmi-MyP1cVn5KLSRdR9iWsUDYEn5oyKnN4vGLv7Zzi3Ppbxz9w4BXnIuxOphEAvX7TjEIcTg0SMBZz9d-BNSj58SgA6iHd9FripDp-IghA-EV1C2CtvgxSvNzuZ0FsykssBM5Zg=w937-h937-s-no?authuser=1"; //human remains
 
-    var number = Math.floor(Math.random() * fishingResultImage.length);
-    return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[number] + '" style="width: 200px" />';
-    }
+    var number = Math.floor(Math.random() * 100);
+        if (number <= 30)
+            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[3] + '" style="width: 200px" />';
+        else if (number <= 50)
+            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[1] + '" style="width: 200px" />';
+        else if (number <= 65)
+            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[2] + '" style="width: 200px" />';
+        else if (number <= 75)
+            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[0] + '" style="width: 200px" />';    
+        else if (number <= 85)
+            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[4] + '" style="width: 200px" />';
+        else if (number <= 90)
+            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[5] + '" style="width: 200px" />';
+        else if (number <= 95)
+            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[6] + '" style="width: 200px" />';
+        else if (number <= 98)
+            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[7] + '" style="width: 200px" />';
+        else (number <= 100)
+            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[8] + '" style="width: 200px" />';
+        console.log(number)
+        }
 
 </script>
 
 <body>
-
     <div id="box">
         <p>Lake Elwood Fishing</p>
         <br>
-        <div id="castlure"><button onclick = "setInterval(fishingResult, 3000);">Cast Lure!</button></div>
+        <div id="castlure"><button onclick = "setTimeout(fishingResult, 2000);">Cast Lure!</button></div>
         <div id="results"><h2>You fished up... </h2><span id="result"></span></div>
         <div id="attempts"><h1>FISHING ATTEMPTS:</h1></div>
         <div id="points"><h1>POINTS:</h1></div>
