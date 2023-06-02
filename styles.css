@@ -6,7 +6,7 @@ body {
     color: rgb(97, 41, 0);
 }
 
-p {
+#title {
     font-size: 100px;
     align-content: center;
     display: flex;
