@@ -1,23 +1,28 @@
 /* const fishingResult = [blackcrappie, stripedbass, largemouthbass, rainbowtrout, glassbottle, oldnewspaper, boot, casinochips, humanremains]
 */
 
+let fishValueNumber = 0
+
+let fishClass = "fishResult"
+
 let counterDisplayElem = document.querySelector('#attempts');
 let count = 4;
 
 fishingAttempts();
 
+function tryAgain() {
+    location.reload(true);
+  }
+
 cast.addEventListener("click",()=>{
     count--;
-    if (count <= -1) {
-        console.log("less than zero");
-        document.location.reload(true);
+    if (count <= 0) {
+        cast.textContent = "Try Again?";
+      cast.removeEventListener("click", fishingAttempts);
+      cast.addEventListener("click", tryAgain)
     }
     fishingAttempts();
 });
-
-let fishValueNumber = 0
-
-let fishClass = "fishResult"
 
 function fishValue(num) {
     fishValueNumber = num
@@ -43,23 +48,23 @@ function fishingResult() {
 
     let number = Math.floor(Math.random() * 100);
         if (number <= 30)
-            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="3" alt="black crappie" src="${fishingResultImage[0]}" /><p>Black Crappie - ${fishValue(3)} ${fishValueNumber}</p>`
+            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="3" alt="black crappie" src="${fishingResultImage[0]}" /><p>Black Crappie - ${fishValue(3)} / ${fishValueNumber}</p>`
         else if (number <= 50)
-            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="3" alt="striped bass" src="${fishingResultImage[1]}" /><p>Striped Bass - ${fishValue(3)}  ${fishValueNumber}</p>`;
+            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="3" alt="striped bass" src="${fishingResultImage[1]}" /><p>Striped Bass - ${fishValue(3)} / ${fishValueNumber}</p>`;
         else if (number <= 65)
-            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="3" alt="largemouth bass" src="${fishingResultImage[2]}" /><p>Largemouth Bass - ${fishValue(3)}  ${fishValueNumber}</p>`;
+            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="3" alt="largemouth bass" src="${fishingResultImage[2]}" /><p>Largemouth Bass - ${fishValue(3)} / ${fishValueNumber}</p>`;
         else if (number <= 75)
-            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="3" alt="rainbow trout" src="${fishingResultImage[3]}" /><p>Rainbow Trout - ${fishValue(3)}  ${fishValueNumber}</p>`;    
+            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="3" alt="rainbow trout" src="${fishingResultImage[3]}" /><p>Rainbow Trout - ${fishValue(3)} / ${fishValueNumber}</p>`;    
         else if (number <= 85)
-            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="1" alt="glass bottle" src="${fishingResultImage[4]}" /><p>Glass Bottle - ${fishValue(1)}  ${fishValueNumber}</p>`;
+            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="1" alt="glass bottle" src="${fishingResultImage[4]}" /><p>Glass Bottle - ${fishValue(1)} / ${fishValueNumber}</p>`;
         else if (number <= 90)
-            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="1" alt="old newspaper" src="${fishingResultImage[5]}" /><p>Old Newspaper - ${fishValue(1)}  ${fishValueNumber}</p>`;
+            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="1" alt="old newspaper" src="${fishingResultImage[5]}" /><p>Old Newspaper - ${fishValue(1)} / ${fishValueNumber}</p>`;
         else if (number <= 95)
-            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="1" alt="boot" src="${fishingResultImage[6]}" /><p>Boot - ${fishValue(1)}  ${fishValueNumber}</p>`;
+            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="1" alt="boot" src="${fishingResultImage[6]}" /><p>Boot - ${fishValue(1)} / ${fishValueNumber}</p>`;
         else if (number <= 98)
-            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="5" alt="vintage casino chips" src="${fishingResultImage[7]}" /><p>Vintage Casino Chips - ${fishValue(5)}  ${fishValueNumber}</p>`;
+            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="5" alt="vintage casino chips" src="${fishingResultImage[7]}" /><p>Vintage Casino Chips - ${fishValue(5)} / ${fishValueNumber}</p>`;
         else (number <= 100)
-            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="10" alt="human remains" src="${fishingResultImage[8]}" /><p>Human Remains - ${fishValue(10)} ${fishValueNumber}</p>`;
+            return document.getElementById("result").innerHTML = `<img class="${fishClass}" value="10" alt="human remains" src="${fishingResultImage[8]}" /><p>Human Remains - ${fishValue(10)} / ${fishValueNumber}</p>`;
 }
 
 
