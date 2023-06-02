@@ -4,7 +4,7 @@ Lake Elwood was inspired by Lake Mead in Nevada close to Las Vegas. The waters h
 
 HOW TO PLAY
 
-The goal of the game is to hit SPACE to cast the lure and fish up something from Lake Elwood. You get four casts and to win the game, you score 10 points or more.
+The goal of the game is to CLICK to cast the lure and fish up something from Lake Elwood. This is a mildly passive game, with a tracker for the score.
 
 There are four different fish species worth 3 points each.
 Debris like a glass bottle, an old newspaper, and a boot are worth 1 point each.
@@ -16,3 +16,4 @@ I used BingAI image generator to create the pixel art seen in the game.
 
 For the on hover button animation, the code I used came from https://dev.to/webdeasy/top-20-css-buttons-animations-f41 - #31. Author: Derek Morash (https://codepen.io/derekmorash).
 
+For the Fishing Attempts counter, I found this website to help create the counter: https://dev.to/stewyearth/making-a-simple-counter-in-javascript-html-2ici Author: Stew (https://github.com/StewyEarth)

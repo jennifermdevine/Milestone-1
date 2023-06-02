@@ -4,14 +4,14 @@
 let counterDisplayElem = document.querySelector('#attempts');
 let count = 0;
 
-updateDisplay();
+fishingAttempts();
 
 cast.addEventListener("click",()=>{
     count++;
-    updateDisplay();
+    fishingAttempts();
 });
 
-function updateDisplay(){
+function fishingAttempts(){
     counterDisplayElem.innerHTML = count;
 };
 
