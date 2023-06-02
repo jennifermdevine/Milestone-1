@@ -2,14 +2,24 @@
 */
 
 let counterDisplayElem = document.querySelector('#attempts');
-let count = 0;
+let count = 4;
 
 fishingAttempts();
 
 cast.addEventListener("click",()=>{
-    count++;
+    count--;
+    if (count <= -1) {
+        console.log("less than zero");
+        document.location.reload(true);
+    }
     fishingAttempts();
 });
+
+let fishValue = 0
+
+let fishClass = ""
+
+
 
 function fishingAttempts(){
     counterDisplayElem.innerHTML = count;
@@ -30,23 +40,23 @@ function fishingResult() {
 
     let number = Math.floor(Math.random() * 100);
         if (number <= 30)
-            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[0] + '" style="width: 200px" /><p>Black Crappie - 3 points!</p>';
+            return document.getElementById("result").innerHTML = `<img class=${fishClass} alt="fishing results" src=" + ${fishingResultImage[0]} + " /><p>Black Crappie - ${fishValue} points!</p>`
         else if (number <= 50)
-            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[1] + '" style="width: 200px" /><p>Striped Bass - 3 points!</p>';
+            return document.getElementById("result").innerHTML = '<img class="fishResult" alt="fishing results" src="' + fishingResultImage[1] + '" /><p>Striped Bass - 3 points!</p>';
         else if (number <= 65)
-            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[2] + '" style="width: 200px" /><p>Largemouth Bass - 3 points!</p>';
+            return document.getElementById("result").innerHTML = '<img class="fishResult" alt="fishing results" src="' + fishingResultImage[2] + '" /><p>Largemouth Bass - 3 points!</p>';
         else if (number <= 75)
-            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[3] + '" style="width: 200px" /><p>Rainbow Trout - 3 points!</p>';    
+            return document.getElementById("result").innerHTML = '<img class="fishResult" alt="fishing results" src="' + fishingResultImage[3] + '" /><p>Rainbow Trout - 3 points!</p>';    
         else if (number <= 85)
-            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[4] + '" style="width: 200px" /><p>Glass Bottle - 1 point!</p>';
+            return document.getElementById("result").innerHTML = '<img class="fishResult" alt="fishing results" src="' + fishingResultImage[4] + '" /><p>Glass Bottle - 1 point!</p>';
         else if (number <= 90)
-            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[5] + '" style="width: 200px" /><p>Old Newspaper - 1 point!</p>';
+            return document.getElementById("result").innerHTML = '<img class="fishResult" alt="fishing results" src="' + fishingResultImage[5] + '" /><p>Old Newspaper - 1 point!</p>';
         else if (number <= 95)
-            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[6] + '" style="width: 200px" /><p>Boot - 1 point!</p>';
+            return document.getElementById("result").innerHTML = '<img class="fishResult" alt="fishing results" src="' + fishingResultImage[6] + '" /><p>Boot - 1 point!</p>';
         else if (number <= 98)
-            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[7] + '" style="width: 200px" /><p>Vintage Casino Chips - 5 points!</p>';
+            return document.getElementById("result").innerHTML = '<img class="fishResult" alt="fishing results" src="' + fishingResultImage[7] + '" /><p>Vintage Casino Chips - 5 points!</p>';
         else (number <= 100)
-            return document.getElementById("result").innerHTML = '<img alt="fishing results" src="' + fishingResultImage[8] + '" style="width: 200px" /><p>Human Remains - 10 points!</p>';
+            return document.getElementById("result").innerHTML = '<img class="fishResult" alt="fishing results" src="' + fishingResultImage[8] + '" /><p>Human Remains - 10 points!</p>';
 }
 
 

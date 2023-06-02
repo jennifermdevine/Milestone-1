@@ -33,6 +33,10 @@ img {
     border: 1px solid black;
 }
 
+.fishResult {
+    max-width: 850px;
+}
+
 button {
     display: flex;
     color: rgb(97, 41, 0);
