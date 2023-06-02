@@ -12,14 +12,14 @@ fishingAttempts();
 
 function tryAgain() {
     location.reload(true);
-  }
+}
 
 cast.addEventListener("click",()=>{
     count--;
     if (count <= 0) {
         cast.textContent = "Try Again?";
-      cast.removeEventListener("click", fishingAttempts);
-      cast.addEventListener("click", tryAgain)
+            cast.removeEventListener("click", fishingAttempts);
+            cast.addEventListener("click", tryAgain)
     }
     fishingAttempts();
 });
