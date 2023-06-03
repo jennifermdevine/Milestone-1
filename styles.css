@@ -10,6 +10,7 @@ body {
 #title {
     font-size: 100px;
     align-content: center;
+    text-align: center;
 }
 
 #box {
@@ -31,12 +32,22 @@ body {
     align-content: center;
 }
 
-#attemptsbox {
+#databox {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #pointsbox {
     display: flex;
+}
+
+#fishingattempts {
+    margin-right: auto;
+}
+
+#score {
+    margin-left: auto;
 }
 
 #showresults {
@@ -51,16 +62,13 @@ img {
     border: 1px solid black;
 }
 
-
-
 button {
     display: flex;
     color: rgb(97, 41, 0);
     font-weight: bold;
     font-size: 30px;
-    text-align: center;
     padding: 14px 40px;
-    width: 100%;
+    width: 50%;
     border-radius: 12px;
     border: 2px solid rgb(97, 41, 0);
     box-shadow: 0 9px rgb(97, 41, 0);
@@ -68,6 +76,9 @@ button {
     overflow: hidden;
     z-index: 1;
     transition: color 250ms ease-in-out;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
         
     &:after {
         content: '';
