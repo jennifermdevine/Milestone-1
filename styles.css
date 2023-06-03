@@ -11,43 +11,32 @@ body {
     font-size: 100px;
     align-content: center;
     text-align: center;
+    opacity: 75%;
+    
 }
 
 #box {
-    padding: 10px;
     background-color: white;
-    opacity: 75%;
-    border: 1px solid black;
+    opacity: 85%;
     height: 500px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     width: 100%;
     align-items: center;
+    margin: 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
-#container {
-    opacity: 75%;
+#fishingattempts {
     display: flex;
-    flex-direction: column;
-    align-content: center;
-}
-
-#databox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    position: relative;
 }
 
 #pointsbox {
     display: flex;
-}
-
-#fishingattempts {
-    margin-right: auto;
-}
-
-#score {
-    margin-left: auto;
+    flex-direction: row;   
 }
 
 #showresults {
@@ -58,8 +47,15 @@ body {
 }
 
 img {
-    width: 25%;
+    width: 23%;
     border: 1px solid black;
+}
+
+#result {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 button {
@@ -68,7 +64,7 @@ button {
     font-weight: bold;
     font-size: 30px;
     padding: 14px 40px;
-    width: 50%;
+    width: 30%;
     border-radius: 12px;
     border: 2px solid rgb(97, 41, 0);
     box-shadow: 0 9px rgb(97, 41, 0);
