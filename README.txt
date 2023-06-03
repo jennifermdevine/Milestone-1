@@ -4,7 +4,7 @@ Lake Elwood was inspired by Lake Mead in Nevada close to Las Vegas. The waters h
 
 HOW TO PLAY
 
-The goal of the game is to CLICK to cast the lure and fish up something from Lake Elwood.
+The goal of the game is to CLICK to cast the lure and fish up something from Lake Elwood. There are four casts per round and the goal is to get 10 points or more.
 
 There are four different fish species worth 3 points each.
 Debris like a glass bottle, an old newspaper, and a boot are worth 1 point each.

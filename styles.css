@@ -2,22 +2,40 @@ body {
     background-image: url(assets/willowbeach_photo.JPG);
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
     color: rgb(97, 41, 0);
+    margin: 0;
+    padding: 0;
 }
 
 #title {
     font-size: 100px;
     align-content: center;
-    display: flex;
 }
 
 #box {
-    padding: 100px;
+    padding: 10px;
     background-color: white;
     opacity: 75%;
     border: 1px solid black;
     height: 500px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#container {
+    opacity: 75%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#attemptsbox {
+    display: flex;
+}
+
+#pointsbox {
     display: flex;
 }
 
@@ -29,19 +47,18 @@ body {
 }
 
 img {
-    width: 50%;
+    width: 25%;
     border: 1px solid black;
 }
 
-.fishResult {
-    max-width: 850px;
-}
+
 
 button {
     display: flex;
     color: rgb(97, 41, 0);
     font-weight: bold;
     font-size: 30px;
+    text-align: center;
     padding: 14px 40px;
     width: 100%;
     border-radius: 12px;
