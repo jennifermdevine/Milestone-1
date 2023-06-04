@@ -12,7 +12,7 @@ There are also vintage casino chips worth 5 points and human remains worth 10 po
 
 CREDITS
 
-Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=19624">Pixabay</a>
+Sound Effect from Pixabay. (https://pixabay.com/sound-effects/search/birds/)
 
 I used BingAI image generator to create the pixel art seen in the game.
 

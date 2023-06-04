@@ -7,6 +7,7 @@ let scoringDisplayElem = document.querySelector('#points');
 scoringDisplayElem.innerHTML = totalScore;
 
 document.getElementById('youwin').style.display = 'none';
+document.getElementById('tryagain').style.display = 'none';
 
 let fishingResultImage = new Array();
 
@@ -36,20 +37,21 @@ function fishing() {
         if (totalScore >= 10) {
             winner();
         } else if (totalScore < 10) {
-            loss();    
+            loss();
         }
     }
     counterDisplayElem.innerHTML = count;
-    
 }
 
 function winner() {
-    document.getElementById('youwin').style.display = 'inline';
-}
+    setTimeout(() => {
+        document.getElementById('youwin').style.display = 'inline';
+    }, "2500")}
 
 function loss() {
-    document.getElementById('youwin').style.display = 'none';
-}
+    setTimeout(() => {
+    document.getElementById('tryagain').style.display = 'inline';
+}, "2500")}
 
 function addFishValue(fishingIndex) {
     let fishValue = fishingResultImage[fishingIndex][1];
