@@ -43,11 +43,25 @@ body {
     top: 0;
 }
 
+#attempts {
+    display: flex;
+    position: absolute;
+    left: 340px;
+    top: 0;
+}
+
 #pointsbox {
     display: flex;
     position: absolute;
     right: 50px;
     top: 0; 
+}
+
+#points {
+    display: flex;
+    position: absolute;
+    right: -35px;
+    top: 0;
 }
 
 #showresults {
@@ -59,7 +73,6 @@ body {
 
 #drumroll {
     position: absolute;
-
 }
 
 #result {
@@ -75,13 +88,20 @@ body {
     right: 350px;
 }
 
-img {
+#fishid {
     width: 20%;
     border: 1px solid black;
     position: absolute;
     top: 50px;
     right: 250px;
     bottom: 0;
+}
+
+#youwin {
+    width: 25%;
+    position: absolute;
+    top: 345px;
+    right: 700px;
 }
 
 button {
@@ -113,7 +133,7 @@ button {
             transform: translateX(-50%);
             width: 0;
             height: 100%;
-            background: rgb(196, 244, 244);
+            background: orangered;
             z-index: -1;
             transition: width 900ms ease-in-out;
         }
@@ -127,7 +147,7 @@ button {
     }
 
 button:active {
-    background-color: rgb(196, 244, 244);
+    background-color: orangered;
     box-shadow: 0 5px rgb(48, 20, 0);
     transform: translateY(4px);
 }

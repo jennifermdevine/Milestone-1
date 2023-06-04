@@ -6,6 +6,8 @@ let totalScore = 0;
 let scoringDisplayElem = document.querySelector('#points');
 scoringDisplayElem.innerHTML = totalScore;
 
+document.getElementById('youwin').style.display = 'none';
+
 let fishingResultImage = new Array();
 
     fishingResultImage[0] = ["https://lh3.googleusercontent.com/uKYCqQJ6kUjQT2B1kteEgp-WL_8jHQWDSd5ZJ4t7I99pRJO9G6sblppvJKMH2sOHNZCuCICdGZ07Lr4PVjgVT_1yjLzg7_gAvz_jp3opGl1XEX9r-RRpBgVGi0aNO6_ImyWbuc6bx5dNKkoWwc7whE0EgwbnlTScPfWpq0OcLMKwcap75TgFHTNkH0tisZ-VE6pCSJ2N9mTnteSV5fI6o8GyjNfjS29W2Z3AKw1KwkdHqJvpg0TBgj4Jtv_eHDpidHTIFgz7WmH_5nu-sSIs5ULiE8DjE7r9m811nTadiTlqlNrq5FG9x02TeLZTwuB4xHxpvOr7CsVSxS2YaGSfyzuCM8Z__mNdz7yCvjexhRJs3cSAUtj5ss5MFZ2K6F5jeErrGwy2upRtUnztnfw5S2bYKy7cGe_rkI0-2UEaRR6skTMQs8dR9CoLS3w8qmiaFN7G2fuglTXgW9BCT3e0N2NRM8ihKBTF4BSDJAo0p8Gn_89DuvdhIMgK3kL93wYc8HWSdhtKrg24UeiEchZg_oTSRV2XFjZvXJQxsQkCWykFDwY1IGIuj0n0Bl5bU_Gsgvet4Da4NV-vuuaIem8Jn0itiIKM1_lCiReKb9DRDksBe4IWvJR1W4Dw19eAXJEfSBJ85kXOiJDiJrWxvE1wBrmNRbq3afP75IJmoPkl1M1Amap02YH0vZOb7T59rONCC1D-Ui-7UCI-Ika1PNKCK0Cr04lXLZaaWbJtdiaP8zt6Y7SCt-0RYEn0AeauMTCYBeyde2wdy568vF1QH_caWPHJLMVf4QH85wzZ1P_By0Wxzy6D8xPrCafio6exeoCaeMfuFehQyACetU4YqccmL8HubJWsA5ebAUjrVji7B9xNd7qDSFAC5vMC5RcCr24s1qQ09StM8umDQIg6PlprfqoqTVRXJM0P30X7GNK6o1kCei9043XUKsko92TNCg4TvbbfSsriZpBrJM3FjENDc7Hunj92fp5HnqkmQrPmbw2tS3xNr9pp3c93VtBf88aeKFSRndrvFJE6M-xcCccAikGio9k=w937-h937-s-no?authuser=1", 3]; //black crappie
@@ -31,22 +33,23 @@ function fishing() {
     if (count <= 0) {
         cast.textContent = "Try Again?";
             cast.addEventListener("click", tryAgain);
-        /* if (count <=0 && totalScore >= 10) {
-            
+        if (totalScore >= 10) {
+            winner();
         } else if (totalScore < 10) {
-            (alert("You've lost - try again!"));    
-        } */
+            loss();    
+        }
     }
     counterDisplayElem.innerHTML = count;
     
 }
 
-/* function celebration() {
-    let celebrate = alert("You've won!");
-    if (count <= 0 && totalScore >= 10) {
-        setTimeout(celebrate, 2500);
-    }
-} */
+function winner() {
+    document.getElementById('youwin').style.display = 'inline';
+}
+
+function loss() {
+    document.getElementById('youwin').style.display = 'none';
+}
 
 function addFishValue(fishingIndex) {
     let fishValue = fishingResultImage[fishingIndex][1];
@@ -58,30 +61,30 @@ function fishingResult() {
     let number = Math.floor(Math.random() * 100);
         if (number <= 30) {
             addFishValue(0);
-            return document.getElementById("result").innerHTML = `<img value="3" alt="black crappie" src="${fishingResultImage[0][0]}" /><p id="caption">Black Crappie - ${fishingResultImage[0][1]} points!</p>`
+            return document.getElementById("result").innerHTML = `<img id="fishid" value="3" alt="black crappie" src="${fishingResultImage[0][0]}" /><p id="caption">Black Crappie - ${fishingResultImage[0][1]} points!</p>`
         } else if (number <= 50) {
             addFishValue(1);
-            return document.getElementById("result").innerHTML = `<img value="3" alt="striped bass" src="${fishingResultImage[1][0]}" /><p id="caption">Striped Bass - ${fishingResultImage[1][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img id="fishid" value="3" alt="striped bass" src="${fishingResultImage[1][0]}" /><p id="caption">Striped Bass - ${fishingResultImage[1][1]} points!</p>`;
         } else if (number <= 65) {
             addFishValue(2);
-            return document.getElementById("result").innerHTML = `<img value="3" alt="largemouth bass" src="${fishingResultImage[2][0]}" /><p id="caption">Largemouth Bass - ${fishingResultImage[2][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img id="fishid" value="3" alt="largemouth bass" src="${fishingResultImage[2][0]}" /><p id="caption">Largemouth Bass - ${fishingResultImage[2][1]} points!</p>`;
         } else if (number <= 75) {
             addFishValue(3);
-            return document.getElementById("result").innerHTML = `<img value="3" alt="rainbow trout" src="${fishingResultImage[3][0]}" /><p id="caption">Rainbow Trout - ${fishingResultImage[3][1]} points!</p>`;    
+            return document.getElementById("result").innerHTML = `<img id="fishid" value="3" alt="rainbow trout" src="${fishingResultImage[3][0]}" /><p id="caption">Rainbow Trout - ${fishingResultImage[3][1]} points!</p>`;    
         } else if (number <= 85) {
             addFishValue(4);
-            return document.getElementById("result").innerHTML = `<img value="1" alt="glass bottle" src="${fishingResultImage[4][0]}" /><p id="caption">Glass Bottle - ${fishingResultImage[4][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img id="fishid" value="1" alt="glass bottle" src="${fishingResultImage[4][0]}" /><p id="caption">Glass Bottle - ${fishingResultImage[4][1]} points!</p>`;
         } else if (number <= 90) {
             addFishValue(5);
-            return document.getElementById("result").innerHTML = `<img value="1" alt="old newspaper" src="${fishingResultImage[5][0]}" /><p id="caption">Old Newspaper - ${fishingResultImage[5][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img id="fishid" value="1" alt="old newspaper" src="${fishingResultImage[5][0]}" /><p id="caption">Old Newspaper - ${fishingResultImage[5][1]} points!</p>`;
         } else if (number <= 95) {
             addFishValue(6);
-            return document.getElementById("result").innerHTML = `<img value="1" alt="boot" src="${fishingResultImage[6][0]}" /><p id="caption">A Single Boot - ${fishingResultImage[6][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img id="fishid" value="1" alt="boot" src="${fishingResultImage[6][0]}" /><p id="caption">A Single Boot - ${fishingResultImage[6][1]} points!</p>`;
         } else if (number <= 98) {
             addFishValue(7);
-            return document.getElementById("result").innerHTML = `<img value="5" alt="vintage casino chips" src="${fishingResultImage[7][0]}" /><p id="caption">Vintage Casino Chips - ${fishingResultImage[7][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img id="fishid" value="5" alt="vintage casino chips" src="${fishingResultImage[7][0]}" /><p id="caption">Vintage Casino Chips - ${fishingResultImage[7][1]} points!</p>`;
         } else if (number <= 100) {
             addFishValue(8);
-            return document.getElementById("result").innerHTML = `<img value="10" alt="human remains" src="${fishingResultImage[8][0]}" /><p id="caption">Human Remains - ${fishingResultImage[8][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img id="fishid" value="10" alt="human remains" src="${fishingResultImage[8][0]}" /><p id="caption">Human Remains - ${fishingResultImage[8][1]} points!</p>`;
         }
 };
