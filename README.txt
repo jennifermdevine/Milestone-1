@@ -16,4 +16,6 @@ I used BingAI image generator to create the pixel art seen in the game.
 
 For the on hover button animation, the code I used came from https://dev.to/webdeasy/top-20-css-buttons-animations-f41 - #31. Author: Derek Morash (https://codepen.io/derekmorash).
 
-For the Fishing Attempts counter, I found this website to help create the counter: https://dev.to/stewyearth/making-a-simple-counter-in-javascript-html-2ici Author: Stew (https://github.com/StewyEarth)
+For the Fishing Attempts counter, I found this website to help create the counter: https://dev.to/stewyearth/making-a-simple-counter-in-javascript-html-2ici Author: Stew (https://github.com/StewyEarth).
+
+A huge shout-out to Geno for his limitless patience and helping me understand Javascript better.

@@ -7,12 +7,18 @@ body {
     padding: 0;
 }
 
-#title {
-    font-size: 100px;
+#intro {
+    font-size: 20px;
     align-content: center;
     text-align: center;
-    opacity: 75%;
-    
+    opacity: 90%;
+}
+
+#title {
+    font-size: 85px;
+    align-content: center;
+    text-align: center;
+    opacity: 80%;
 }
 
 #box {
@@ -27,16 +33,21 @@ body {
     margin: 0;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    position: relative;
 }
 
 #fishingattempts {
     display: flex;
-    position: relative;
+    position: absolute;
+    left: 50px;
+    top: 0;
 }
 
 #pointsbox {
     display: flex;
-    flex-direction: row;   
+    position: absolute;
+    right: 50px;
+    top: 0; 
 }
 
 #showresults {
@@ -46,9 +57,9 @@ body {
     display: flex;
 }
 
-img {
-    width: 23%;
-    border: 1px solid black;
+#drumroll {
+    position: absolute;
+
 }
 
 #result {
@@ -56,6 +67,21 @@ img {
     align-items: center;
     align-content: center;
     justify-content: center;
+}
+
+#caption {
+    position: absolute;
+    bottom: 0;
+    right: 350px;
+}
+
+img {
+    width: 20%;
+    border: 1px solid black;
+    position: absolute;
+    top: 50px;
+    right: 250px;
+    bottom: 0;
 }
 
 button {
@@ -68,13 +94,15 @@ button {
     border-radius: 12px;
     border: 2px solid rgb(97, 41, 0);
     box-shadow: 0 9px rgb(97, 41, 0);
-    position: relative;
+    position: absolute;
     overflow: hidden;
     z-index: 1;
     transition: color 250ms ease-in-out;
     justify-content: center;
     align-items: center;
     text-align: center;
+    top: 200px;
+    left: 100px;
         
     &:after {
         content: '';
@@ -85,13 +113,13 @@ button {
             transform: translateX(-50%);
             width: 0;
             height: 100%;
-            background: rgb(250, 104, 0);
+            background: rgb(196, 244, 244);
             z-index: -1;
             transition: width 900ms ease-in-out;
         }
         
         &:hover {
-            color: #fff;
+            color: rgb(48, 20, 0);
             &:after {
             width: 110%;
             }
@@ -99,7 +127,7 @@ button {
     }
 
 button:active {
-    background-color: rgb(250, 104, 0);
+    background-color: rgb(196, 244, 244);
     box-shadow: 0 5px rgb(48, 20, 0);
     transform: translateY(4px);
 }

@@ -1,6 +1,3 @@
-/* const fishingResult = [blackcrappie, stripedbass, largemouthbass, rainbowtrout, glassbottle, oldnewspaper, boot, casinochips, humanremains]
-*/
-
 let count = 4;
 let counterDisplayElem = document.querySelector('#attempts');
 counterDisplayElem.innerHTML = count;
@@ -8,8 +5,6 @@ counterDisplayElem.innerHTML = count;
 let totalScore = 0;
 let scoringDisplayElem = document.querySelector('#points');
 scoringDisplayElem.innerHTML = totalScore;
-
-
 
 let fishingResultImage = new Array();
 
@@ -36,50 +31,57 @@ function fishing() {
     if (count <= 0) {
         cast.textContent = "Try Again?";
             cast.addEventListener("click", tryAgain);
-        /* if (totalScore >= 10) {
-            alert("You've won!");
+        /* if (count <=0 && totalScore >= 10) {
+            
         } else if (totalScore < 10) {
-            alert("You've lost - try again!");    
+            (alert("You've lost - try again!"));    
         } */
     }
     counterDisplayElem.innerHTML = count;
+    
 }
+
+/* function celebration() {
+    let celebrate = alert("You've won!");
+    if (count <= 0 && totalScore >= 10) {
+        setTimeout(celebrate, 2500);
+    }
+} */
 
 function addFishValue(fishingIndex) {
     let fishValue = fishingResultImage[fishingIndex][1];
     totalScore = fishValue + totalScore;
     scoringDisplayElem.innerHTML = totalScore;
-
 }
 
 function fishingResult() {
     let number = Math.floor(Math.random() * 100);
         if (number <= 30) {
             addFishValue(0);
-            return document.getElementById("result").innerHTML = `<img value="3" alt="black crappie" src="${fishingResultImage[0][0]}" /><p>Black Crappie - ${fishingResultImage[0][1]} points!</p>`
+            return document.getElementById("result").innerHTML = `<img value="3" alt="black crappie" src="${fishingResultImage[0][0]}" /><p id="caption">Black Crappie - ${fishingResultImage[0][1]} points!</p>`
         } else if (number <= 50) {
             addFishValue(1);
-            return document.getElementById("result").innerHTML = `<img value="3" alt="striped bass" src="${fishingResultImage[1][0]}" /><p>Striped Bass - ${fishingResultImage[1][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img value="3" alt="striped bass" src="${fishingResultImage[1][0]}" /><p id="caption">Striped Bass - ${fishingResultImage[1][1]} points!</p>`;
         } else if (number <= 65) {
             addFishValue(2);
-            return document.getElementById("result").innerHTML = `<img value="3" alt="largemouth bass" src="${fishingResultImage[2][0]}" /><p>Largemouth Bass - ${fishingResultImage[2][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img value="3" alt="largemouth bass" src="${fishingResultImage[2][0]}" /><p id="caption">Largemouth Bass - ${fishingResultImage[2][1]} points!</p>`;
         } else if (number <= 75) {
             addFishValue(3);
-            return document.getElementById("result").innerHTML = `<img value="3" alt="rainbow trout" src="${fishingResultImage[3][0]}" /><p>Rainbow Trout - ${fishingResultImage[3][1]} points!</p>`;    
+            return document.getElementById("result").innerHTML = `<img value="3" alt="rainbow trout" src="${fishingResultImage[3][0]}" /><p id="caption">Rainbow Trout - ${fishingResultImage[3][1]} points!</p>`;    
         } else if (number <= 85) {
             addFishValue(4);
-            return document.getElementById("result").innerHTML = `<img value="1" alt="glass bottle" src="${fishingResultImage[4][0]}" /><p>Glass Bottle - ${fishingResultImage[4][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img value="1" alt="glass bottle" src="${fishingResultImage[4][0]}" /><p id="caption">Glass Bottle - ${fishingResultImage[4][1]} points!</p>`;
         } else if (number <= 90) {
             addFishValue(5);
-            return document.getElementById("result").innerHTML = `<img value="1" alt="old newspaper" src="${fishingResultImage[5][0]}" /><p>Old Newspaper - ${fishingResultImage[5][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img value="1" alt="old newspaper" src="${fishingResultImage[5][0]}" /><p id="caption">Old Newspaper - ${fishingResultImage[5][1]} points!</p>`;
         } else if (number <= 95) {
             addFishValue(6);
-            return document.getElementById("result").innerHTML = `<img value="1" alt="boot" src="${fishingResultImage[6][0]}" /><p>Boot - ${fishingResultImage[6][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img value="1" alt="boot" src="${fishingResultImage[6][0]}" /><p id="caption">A Single Boot - ${fishingResultImage[6][1]} points!</p>`;
         } else if (number <= 98) {
             addFishValue(7);
-            return document.getElementById("result").innerHTML = `<img value="5" alt="vintage casino chips" src="${fishingResultImage[7][0]}" /><p>Vintage Casino Chips - ${fishingResultImage[7][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img value="5" alt="vintage casino chips" src="${fishingResultImage[7][0]}" /><p id="caption">Vintage Casino Chips - ${fishingResultImage[7][1]} points!</p>`;
         } else if (number <= 100) {
             addFishValue(8);
-            return document.getElementById("result").innerHTML = `<img value="10" alt="human remains" src="${fishingResultImage[8][0]}" /><p>Human Remains - ${fishingResultImage[8][1]} points!</p>`;
+            return document.getElementById("result").innerHTML = `<img value="10" alt="human remains" src="${fishingResultImage[8][0]}" /><p id="caption">Human Remains - ${fishingResultImage[8][1]} points!</p>`;
         }
 };
