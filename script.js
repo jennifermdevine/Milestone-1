@@ -33,25 +33,33 @@ function fishing() {
     count--;
     if (count <= 0) {
         cast.textContent = "Try Again?";
-            cast.addEventListener("click", tryAgain);
+        cast.addEventListener("click", tryAgain);
+        results();
+    }
+    counterDisplayElem.innerHTML = count;
+}
+
+function results() { 
+    setTimeout(() => {
         if (totalScore >= 10) {
             winner();
         } else if (totalScore < 10) {
             loss();
         }
-    }
-    counterDisplayElem.innerHTML = count;
+    }, 1000);
 }
 
 function winner() {
     setTimeout(() => {
         document.getElementById('youwin').style.display = 'inline';
-    }, "2500")}
+        console.log("Winner!");
+    }, "150")}
 
 function loss() {
     setTimeout(() => {
     document.getElementById('tryagain').style.display = 'inline';
-}, "2500")}
+    console.log("Try again!");
+}, "150")}
 
 function addFishValue(fishingIndex) {
     let fishValue = fishingResultImage[fishingIndex][1];

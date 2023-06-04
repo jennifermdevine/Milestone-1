@@ -12,8 +12,6 @@ There are also vintage casino chips worth 5 points and human remains worth 10 po
 
 CREDITS
 
-Sound Effect from Pixabay. (https://pixabay.com/sound-effects/search/birds/)
-
 I used BingAI image generator to create the pixel art seen in the game.
 
 For the on hover button animation, the code I used came from https://dev.to/webdeasy/top-20-css-buttons-animations-f41 - #31. Author: Derek Morash (https://codepen.io/derekmorash).
