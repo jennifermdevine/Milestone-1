@@ -46,7 +46,7 @@ body {
 #fishingattempts {
     display: flex;
     position: absolute;
-    left: 50px;
+    left: 10px;
     top: 0;
 }
 
