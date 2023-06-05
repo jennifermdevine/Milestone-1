@@ -7,6 +7,13 @@ body {
     padding: 0;
 }
 
+#birdsong {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
 #intro {
     font-size: 20px;
     align-content: center;
@@ -98,17 +105,17 @@ body {
 }
 
 #youwin {
-    width: 25%;
-    position: absolute;
-    top: 345px;
-    right: 700px;
+    position: relative;
+    width: 45%;
+    left: 300px;
+    opacity: 100%;
 }
 
 #tryagain {
-    width: 25%;
-    position: absolute;
-    top: 345px;
-    right: 700px;
+    position: relative;
+    width: 45%;
+    left: 300px;
+    opacity: 100%;
 }
 
 button {
