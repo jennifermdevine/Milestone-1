@@ -9,8 +9,6 @@ body {
 
 #birdsong {
     display: flex;
-    align-items: center;
-    align-content: center;
     justify-content: center;
 }
 
@@ -84,8 +82,6 @@ body {
 
 #result {
     display: flex;
-    align-items: center;
-    align-content: center;
     justify-content: center;
 }
 
@@ -104,14 +100,7 @@ body {
     bottom: 0;
 }
 
-#youwin {
-    position: relative;
-    width: 45%;
-    left: 300px;
-    opacity: 100%;
-}
-
-#tryagain {
+#youwin, #tryagain {
     position: relative;
     width: 45%;
     left: 300px;
