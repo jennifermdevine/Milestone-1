@@ -27,6 +27,19 @@ window.onload = function() {
     audioEle.play();
 }
 
+cast.addEventListener('click', function () {
+    var fishingReel = document.getElementById('fishingreel');
+    fishingReel.currentTime = 0;
+    fishingReel.play();
+    setTimeout(function () {
+      fishingReel.pause();
+    }, 1525);
+  });
+
+function reelclick() {
+    cast.addEventListener("click", reel);
+}
+
 function tryAgain() {
     location.reload(true);
 }
