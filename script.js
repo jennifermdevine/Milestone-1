@@ -22,9 +22,9 @@ let fishingResultImage = new Array();
     fishingResultImage[8] = ["https://i.ibb.co/z8FsG07/humanremains-pixelart.jpg", 10]; //human remains
 
 window.onload = function() {
-    let audioEle = document.getElementById("birds");
-    audioEle.volume = 0.3;
-    audioEle.play();
+    let birdsong = document.getElementById("birds");
+    birdsong.volume = 0.3;
+    birdsong.play();
 }
 
 cast.addEventListener('click', function () {
@@ -32,9 +32,9 @@ cast.addEventListener('click', function () {
     fishingReel.currentTime = 0;
     fishingReel.play();
     setTimeout(function () {
-      fishingReel.pause();
+    fishingReel.pause();
     }, 1525);
-  });
+});
 
 function reelclick() {
     cast.addEventListener("click", reel);
