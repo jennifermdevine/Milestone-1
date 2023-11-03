@@ -36,7 +36,7 @@ cast.addEventListener('click', function () {
     }, 1525);
 });
 
-function reelclick() {
+function reelClick() {
     cast.addEventListener("click", reel);
 }
 
@@ -65,7 +65,7 @@ function results() {
         } else if (totalScore < 10) {
             loss();
         }
-    }, 1000);
+    }, 1100);
 }
 
 function winner() {

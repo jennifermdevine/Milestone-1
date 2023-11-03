@@ -1,0 +1,156 @@
+body {
+    background-image: url(assets/willowbeach_photo.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(97, 41, 0);
+    margin: 0;
+    padding: 0;
+}
+
+#birdsong {
+    display: flex;
+    justify-content: center;
+}
+
+#intro {
+    font-size: 20px;
+    align-content: center;
+    text-align: center;
+    opacity: 90%;
+}
+
+#title {
+    font-size: 85px;
+    align-content: center;
+    text-align: center;
+    opacity: 80%;
+}
+
+#box {
+    background-color: white;
+    opacity: 85%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    position: relative;
+
+    #fishingattempts {
+        display: flex;
+        position: absolute;
+        left: 10px;
+        top: 0;
+    }
+
+    #attempts {
+        display: flex;
+        position: absolute;
+        left: 340px;
+        top: 0;
+    }
+
+    #pointsbox {
+        display: flex;
+        position: absolute;
+        right: 50px;
+        top: 0; 
+    }
+
+    #points {
+        display: flex;
+        position: absolute;
+        right: -35px;
+        top: 0;
+    }
+
+    #showresults {
+        padding: 10px;
+        border: 1px solid black;
+        height: 250px;
+        display: flex;
+
+        #drumroll {
+            position: absolute;
+        }
+
+        #result {
+            display: flex;
+            justify-content: center;
+        }
+
+        #caption {
+            position: absolute;
+            bottom: 0;
+            right: 350px;
+        }
+    }
+
+    #fishid {
+        width: 20%;
+        border: 1px solid black;
+        position: absolute;
+        top: 50px;
+        right: 250px;
+        bottom: 0;
+    }
+
+    #youwin, #tryagain {
+        position: relative;
+        width: 50%;
+        left: 300px;
+        opacity: 100%;
+    }
+
+button {
+    display: flex;
+    color: rgb(97, 41, 0);
+    font-weight: bold;
+    font-size: 30px;
+    padding: 14px 40px;
+    width: 30%;
+    border-radius: 12px;
+    border: 2px solid rgb(97, 41, 0);
+    box-shadow: 0 9px rgb(97, 41, 0);
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 250ms ease-in-out;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 200px;
+    left: 100px;
+        
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 100%;
+        background: orangered;
+        z-index: -1;
+        transition: width 900ms ease-in-out;
+        }
+        
+    &:hover {
+        color: white;
+            &:after {
+                width: 110%;
+            }
+        }
+
+    &:active {
+        background-color: orangered;
+        box-shadow: 0 5px rgb(48, 20, 0);
+        transform: translateY(4px);
+        }
+    }
+}
