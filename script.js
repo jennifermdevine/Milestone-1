@@ -11,15 +11,15 @@ document.getElementById('tryagain').style.display = 'none';
 
 let fishingResultImage = new Array();
 
-    fishingResultImage[0] = ["https://i.ibb.co/RzQXMB4/blackcrappie-pixelart.jpg", 3]; //black crappie
-    fishingResultImage[1] = ["https://i.ibb.co/x55vhSM/stripedbass-pixelart.jpg", 3]; //striped bass
-    fishingResultImage[2] = ["https://i.ibb.co/FVhmtw7/largemouthbass-pixelart.jpg", 3]; //largemouth bass
-    fishingResultImage[3] = ["https://i.ibb.co/8skd521/rainbowtrout-pixelart.jpg", 3]; //rainbow trout
-    fishingResultImage[4] = ["https://i.ibb.co/tqzPSZZ/glassbottle-pixelart.jpg", 1]; //glass bottle
-    fishingResultImage[5] = ["https://i.ibb.co/HBNzWPQ/oldnewspaper-pixelart.jpg", 1]; //old newspaper
-    fishingResultImage[6] = ["https://i.ibb.co/bvkJgTX/boot-pixelart.jpg", 1]; //single boot
-    fishingResultImage[7] = ["https://i.ibb.co/ckdqLHv/casinochips-pixelart.png", 5]; //vintage casino chips
-    fishingResultImage[8] = ["https://i.ibb.co/z8FsG07/humanremains-pixelart.jpg", 10]; //human remains
+    fishingResultImage[0] = ["https://i.ibb.co/GVqjmdf/blackcrappie-pixelart.jpg", 3]; //black crappie
+    fishingResultImage[1] = ["https://i.ibb.co/jWcpswW/stripedbass-pixelart.jpg", 3]; //striped bass
+    fishingResultImage[2] = ["https://i.ibb.co/PM2Td8Y/largemouthbass-pixelart.jpg", 3]; //largemouth bass
+    fishingResultImage[3] = ["https://i.ibb.co/n3f2kWg/rainbowtrout-pixelart.jpg", 3]; //rainbow trout
+    fishingResultImage[4] = ["https://i.ibb.co/cYbSs5y/glassbottle-pixelart.jpg", 1]; //glass bottle
+    fishingResultImage[5] = ["https://i.ibb.co/f8mbptt/oldnewspaper-pixelart.jpg", 1]; //old newspaper
+    fishingResultImage[6] = ["https://i.ibb.co/1RnmBkB/boot-pixelart.jpg", 1]; //single boot
+    fishingResultImage[7] = ["https://i.ibb.co/tQqRk4j/casinochips-pixelart.png", 5]; //vintage casino chips
+    fishingResultImage[8] = ["https://i.ibb.co/qJRZdt4/humanremains-pixelart.jpg", 10]; //human remains
 
 window.onload = function() {
     let birdsong = document.getElementById("birds");
